@@ -6,4 +6,3 @@ CREATE TABLE llamas (
     age INT CHECK (age > 0),
     weight TEXT
 );
-
