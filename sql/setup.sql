@@ -1,0 +1,9 @@
+DROP TABLE IF EXISTS lamas;
+
+CREATE TABLE lamas (
+    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    name TEXT NOT NULL,
+    age INT CHECK (age > 0),
+    weight TEXT
+);
+
