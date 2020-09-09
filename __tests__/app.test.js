@@ -22,6 +22,22 @@ describe('PostgreSQL-Models routes', () => {
     });
   });
 
+  it('deletes a llama by id via DELETE', async() => {
+    const createdLlama = await Llama.insert({
+      name: 'sammy',
+      age: 10,
+      weight: '300 lbs'
+    });
 
+    const response = await request(app)
+      .delete(`/api/v1/llamas/${createdLlama.id}`);
+
+    expect(response.body).toEqual({
+      id: createdLlama.id,
+      name: 'sammy',
+      age: 10,
+      weight: '300 lbs'
+    });
+  });
 
 });
