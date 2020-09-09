@@ -1,0 +1,40 @@
+DROP TABLE IF EXISTS llamas;
+DROP TABLE IF EXISTS lions;
+DROP TABLE IF EXISTS sharks;
+DROP TABLE IF EXISTS whales;
+DROP TABLE IF EXISTS thundercats;
+
+CREATE TABLE llamas (
+    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    name TEXT NOT NULL,
+    age INT CHECK (age > 0),
+    weight TEXT
+);
+
+CREATE TABLE lions (
+    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    name TEXT NOT NULL,
+    age INT CHECK (age > 0),
+    weight TEXT
+);
+
+CREATE TABLE sharks (
+    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    name TEXT NOT NULL,
+    age INT CHECK (age > 0),
+    weight TEXT
+);
+
+CREATE TABLE whales (
+    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    name TEXT NOT NULL,
+    age INT CHECK (age > 0),
+    weight TEXT
+);
+
+CREATE TABLE thundercats (
+    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    name TEXT NOT NULL,
+    age INT CHECK (age > 0),
+    weight TEXT
+);
